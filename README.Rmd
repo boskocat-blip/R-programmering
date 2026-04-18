@@ -3,3 +3,52 @@ title: "README"
 output: html_document
 ---
 
+# Analys av försäkringskostnader
+
+## Beskrivning
+Detta projekt analyserar vilka faktorer som hänger ihop med försäkringskostnader med hjälp av statistisk analys och regressionsmodeller i R.
+
+## Data
+Datasetet innehåller information om kunder, till exempel:
+- ålder
+- kön
+- BMI
+- antal barn
+- rökning
+- tidigare olyckor
+- tidigare claims
+- kronisk sjukdom
+- motionsnivå
+- försäkringsplan (plan_type)
+- region
+- försäkringskostnad (charges)
+
+## Projektstruktur
+- data/ → dataset (insurance_costs.csv)
+- R/ → analyskod (analysis.R)
+- report/ → rapport (report.Rmd)
+
+## Paket som används
+- tidyverse
+- janitor
+
+## Hur man kör projektet
+
+1. Öppna projektet i RStudio (.Rproj)
+2. Kör skriptet:
+   R/analysis.R
+3. Öppna:
+   report/report.Rmd
+4. Klicka på "Knit" för att skapa rapporten
+
+## Innehåll
+Analysen innehåller:
+- datastädning
+- skapande av nya variabler (bmi_category, age_group, risk_score)
+- deskriptiv analys med visualiseringar
+- regressionsmodeller (model1 och model2)
+- jämförelse av modeller (AIC)
+- diagnostiska grafer
+
+## Författare
+Biljana Markovic

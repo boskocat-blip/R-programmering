@@ -3,3 +3,61 @@ title: "Rapport"
 output: html_document
 ---
 
+Analys av försäkringskostnader
+
+Syfte:
+
+Syftet med denna analys är att undersöka vilka faktorer som påverkar försäkringskostnader och om en regressionmodell kan användas som stöd.
+
+Dataförståelse:
+
+Datasetet innehåller information om kunder, till exempel: ålder, BMI, rökning, antal barn och tidigare olyckor och claims.
+
+Jag använde str() och summary() för att få en överblick.Det finns några saknade värden, men påverkar inte analysen så mycket.
+
+
+Datastädning:
+
+Jag konverterade vissa variabler till faktorer och skapade nya variabler:
+
+- bmi_category
+- age_group
+- risk_score (prior accidents + claims)
+Detta gjorde datat enklare att analysera.
+
+Deskriptiv analys:
+
+Histogrammet visar att kostnaderna är ojämnt fördelade (några väldigt höga värden).
+
+Boxploten visar att rökare har högre kostnader.
+
+Scatterplots visar att både BMI och risk score har ett positivt samband med kostnader.
+
+Reggresionanalys:
+
+Jag skapade två modeller. Modell 2 hade lägre AIC och passar datat bättre.
+
+Viktiga variabler var:
+- rökning
+- BMI
+- ålder
+- risk score
+
+Tolkning:
+
+Resultaten är rimliga. Rökning har störst effekt, och högre BMI, ålder och risk score leder till högre kostnader.
+
+Begränsningar:
+
+- Modellen är linjär
+- Alla faktorer finns inte med
+- Samband betyder inte orsak
+
+
+Slutsats:
+
+De viktigaste faktorerna är rökning, BMI, ålder och tidigare historik. Modellen fungerar som ett bra stöd, men kan förbättras.
+
+Självreflektion:
+
+Jag tycker att jag gjorde en tydlig analys och lyckades jämföra två modeller. Det svårsate var att få allt fungera i R. Jag tror att jobba i Visual med Python är lättare. 
